@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/intibiome" mode="merge"/>
+    <filter root="/content/intibiome" mode="merge"/>
+    <filter root="/content/dam/intibiome/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/intibiome" mode="merge"/>
+</workspaceFilter>
