@@ -1,16 +1,30 @@
-
-//== XF Footer style, used on page template
-
-footer.experiencefragment {
-    padding: .5em 1em;
-    border-top: 1px solid $color-foreground;
-
-    @media (prefers-color-scheme: dark) {
-        border-color: $color-foreground-dark;
-    }
-
-    .cmp-separator__horizontal-rule {
-        margin: 0;
-        border: 0;
-    }
+footer.experiencefragment { background: #fff; color: #45413f; width: 100%; }
+.cmp-minimal-footer {
+  background: #fff; color: #45413f; font-family: Arial, Helvetica, sans-serif;
+  *, *::before, *::after { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  &__content { min-height: 450px; padding-bottom: 48px; padding-top: 72px; }
+  &__brand img { display: block; max-height: 105px; max-width: 145px; object-fit: contain; }
+  &__monogram { color: #cbb8a3; display: inline-flex; font-family: Georgia, serif; font-size: 72px; letter-spacing: -24px; line-height: 1; }
+  &__monogram sup { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 0; margin-left: 20px; }
+  h2 { color: #171310; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; margin: 0 0 22px; }
+  &__about p { font-size: 17px; letter-spacing: .35px; line-height: 1.7; margin: 0; max-width: 360px; white-space: pre-line; }
+  &__column li { margin-bottom: 17px; }
+  &__column a { font-size: 14px; letter-spacing: .4px; text-transform: uppercase; }
+  &__social { gap: 22px; justify-content: flex-end; margin-top: 140px; }
+  &__social svg { fill: #000; height: 18px; stroke: #000; stroke-width: 1.5; width: 18px; }
+  &__social rect, &__social circle { fill: none; }
+  &__social .cmp-minimal-footer__play { fill: #fff; stroke: none; }
+  &__bottom { border-top: 1px solid #e5e2df; gap: 22px; padding: 16px 24px 28px; }
+  &__payments { gap: 10px; }
+  &__payments span { align-items: center; border: 1px solid #ddd; border-radius: 3px; display: flex; font-size: 9px; font-weight: 700; height: 24px; justify-content: center; min-width: 38px; padding: 0 5px; }
+  &__payments span:first-child, &__payments span:last-child { background: #1855bd; color: #fff; }
+  &__payments span:nth-child(4) { background: #111; color: #f5b31b; font-size: 13px; }
+  small { font-size: 11px; letter-spacing: .5px; }
+}
+@media (max-width: 991.98px) {
+  .cmp-minimal-footer { &__content { min-height: 0; padding: 56px 32px; } &__social { justify-content: flex-start; margin-top: 40px; } }
+}
+@media (max-width: 767.98px) {
+  .cmp-minimal-footer { &__content { padding: 44px 22px; } &__about p { max-width: none; } &__social { margin-top: 28px; } &__bottom { text-align: center; } }
 }

@@ -13,22 +13,27 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="intibiome/components/container"
             layout="simple">
-            <navigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="intibiome/components/navigation"
-                collectAllPages="false"
-                navigationRoot="/content/intibiome/us/en"
-                skipNavigationRoot="false"
-                structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="intibiome/components/languagenavigation"
-                navigationRoot="/content/intibiome/us"
-                structureDepth="2"/>
-            <search
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="intibiome/components/search"
-                searchRoot="/content/intibiome/us"/>
+            <header jcr:primaryType="nt:unstructured" sling:resourceType="intibiome/components/header"
+                promotionText="FRETE GRÁTIS a partir de 199" homeLink="/content/intibiome/us/en.html" logoAlt="Minimal Beauty"
+                searchLink="#" accountLink="#" bagLink="#">
+                <menuItems jcr:primaryType="nt:unstructured">
+                    <item0 jcr:primaryType="nt:unstructured" label="Kits" link="#"/>
+                    <item1 jcr:primaryType="nt:unstructured" label="Tipos de pele" link="#" active="true">
+                        <submenu jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" label="Pele com manchas/melasma" link="#"/>
+                            <item1 jcr:primaryType="nt:unstructured" label="Pele oleosa/mista" link="#"/>
+                            <item2 jcr:primaryType="nt:unstructured" label="Pele madura" link="#"/>
+                            <item3 jcr:primaryType="nt:unstructured" label="Pele acneica" link="#"/>
+                            <item4 jcr:primaryType="nt:unstructured" label="Pele seca" link="#"/>
+                            <item5 jcr:primaryType="nt:unstructured" label="Pele sensível" link="#"/>
+                        </submenu>
+                    </item1>
+                    <item2 jcr:primaryType="nt:unstructured" label="Best Sellers" link="#"/>
+                    <item3 jcr:primaryType="nt:unstructured" label="Bem Estar" link="#"/>
+                    <item4 jcr:primaryType="nt:unstructured" label="Todos" link="#"/>
+                    <item5 jcr:primaryType="nt:unstructured" label="Quiz da Pele" link="#"/>
+                </menuItems>
+            </header>
         </root>
     </jcr:content>
 </jcr:root>

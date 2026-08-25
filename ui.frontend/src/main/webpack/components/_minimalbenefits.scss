@@ -1,0 +1,17 @@
+.cmp-minimal-benefits {
+  background: #fff;
+  color: #45413f;
+  &__item { padding: 5px 20px 24px; }
+  &__item strong, &__item span { display: block; }
+  &__item strong { font-size: 17px; letter-spacing: .02em; text-transform: uppercase; }
+  &__item span { font-size: 17px; letter-spacing: .03em; margin-top: 6px; }
+  &__empty { background: #fff; color: #222; margin: 0; padding: 22px; text-align: center; }
+}
+
+@media (max-width: 767.98px) {
+  .cmp-minimal-benefits {
+    &__item { border-bottom: 1px solid #eee; padding: 18px 16px; }
+    &__item:last-child { border-bottom: 0; }
+    &__item strong, &__item span { font-size: 14px; }
+  }
+}

@@ -1,0 +1,14 @@
+<sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalBenefitsModel"/>
+
+<aside class="cmp-minimal-benefits border-bottom" aria-label="Vantagens da loja">
+  <div class="container-fluid">
+    <div class="row g-0 text-center">
+      <div class="cmp-minimal-benefits__item col-12 col-md" data-sly-repeat.benefit="${model.benefits}">
+        <strong>${benefit.title}</strong>
+        <span data-sly-test="${benefit.description}">${benefit.description}</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<p class="cmp-minimal-benefits__empty" data-sly-test="${!model.benefits.size && wcmmode.edit}">Configure the Minimal Beauty Benefits.</p>

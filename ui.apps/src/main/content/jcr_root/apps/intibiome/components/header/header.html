@@ -1,0 +1,25 @@
+<sly data-sly-use.header="br.com.caroline.intibiome.core.models.HeaderModel"/>
+<div class="cmp-minimal-header">
+  <a class="cmp-minimal-header__promotion" href="${header.promotionLink @ context='uri'}" data-sly-unwrap="${!header.promotionLink}"><span>${header.promotionText}</span><span aria-hidden="true">&#8594;</span></a>
+  <nav class="cmp-minimal-header__main navbar navbar-expand-lg navbar-light container-fluid">
+    <button class="cmp-minimal-header__menu-toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#minimal-header-navigation" aria-controls="minimal-header-navigation" aria-expanded="false" aria-label="Abrir navegação"><span class="navbar-toggler-icon"></span></button>
+    <a class="cmp-minimal-header__brand navbar-brand" href="${header.homeLink @ context='uri'}" aria-label="${header.logoAlt}">
+      <img class="cmp-minimal-header__logo-image" data-sly-test="${header.logoReference}" src="${header.logoReference @ context='uri'}" alt="${header.logoAlt}"/>
+      <span class="cmp-minimal-header__wordmark" data-sly-test="${!header.logoReference}" aria-hidden="true"><span>MINIMAL</span><span>BEAUTY<sup>&reg;</sup></span></span>
+    </a>
+    <div class="cmp-minimal-header__navigation collapse navbar-collapse" id="minimal-header-navigation">
+      <ul class="cmp-minimal-header__menu navbar-nav" data-sly-list.item="${header.menuItems}">
+        <li class="cmp-minimal-header__menu-item nav-item${item.active ? ' cmp-minimal-header__menu-item--active' : ''}${item.hasChildren ? ' dropdown' : ''}">
+          <a class="cmp-minimal-header__menu-link nav-link${item.hasChildren ? ' dropdown-toggle' : ''}" href="${item.link @ context='uri'}" data-bs-toggle="${item.hasChildren ? 'dropdown' : ''}" aria-expanded="false">${item.label}</a>
+          <ul data-sly-test="${item.hasChildren}" class="cmp-minimal-header__submenu dropdown-menu" data-sly-list.child="${item.children}"><li><a class="dropdown-item" href="${child.link @ context='uri'}">${child.label}</a></li></ul>
+        </li>
+      </ul>
+    </div>
+    <div class="cmp-minimal-header__utilities d-flex align-items-center">
+      <a href="${header.searchLink @ context='uri'}" aria-label="Busca"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="M16 16l5 5"/></svg></a>
+      <a class="cmp-minimal-header__account" href="${header.accountLink @ context='uri'}" aria-label="Minha conta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M4.5 21v-2.5A5.5 5.5 0 0110 13h4a5.5 5.5 0 015.5 5.5V21z"/></svg></a>
+      <a href="${header.bagLink @ context='uri'}" aria-label="Sacola"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5h14l-1 13H6z"/><path d="M9 9V5a3 3 0 016 0v4"/></svg></a>
+    </div>
+  </nav>
+</div>
+<sly data-sly-test="${wcmmode.edit && !header.configured}"><div class="cq-placeholder" data-emptytext="Configure Minimal Beauty Header"></div></sly>

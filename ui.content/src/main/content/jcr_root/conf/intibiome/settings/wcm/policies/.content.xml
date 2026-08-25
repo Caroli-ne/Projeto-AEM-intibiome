@@ -278,7 +278,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="XF Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:Intibiome - Content,/apps/intibiome/components/form/container]">
+                    components="[group:Intibiome - Content,/apps/intibiome/components/form/container,/apps/intibiome/components/header]">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">

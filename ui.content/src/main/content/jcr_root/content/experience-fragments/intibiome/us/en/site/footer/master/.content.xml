@@ -13,14 +13,30 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="intibiome/components/container"
             layout="responsiveGrid">
-            <separator
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="intibiome/components/separator"/>
-            <text
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="intibiome/components/text"
-                text="&lt;p>Copyright 2026, Intibiome.&amp;nbsp;All rights reserved.&lt;/p>&#xd;&#xa;&lt;p>345 Park Avenue,&amp;nbsp;San Jose, CA 95110-2704, USA&lt;/p>&#xd;&#xa;"
-                textIsRich="true"/>
+            <footer jcr:primaryType="nt:unstructured" sling:resourceType="intibiome/components/footer"
+                logoAlt="Minimal Beauty" aboutTitle="A MINIMAL"
+                aboutText="Cosméticos faciais livres de Toxinas, Veganos, Cruelty-free, com ativos Orgânicos e sustentáveis. Nossas Fórmulas possuem Alta Tecnologia e Performance na pele. Produzido na Serra Gaúcha."
+                categoriesTitle="CATEGORIAS" informationTitle="INFORMAÇÕES"
+                facebookLink="#" instagramLink="#" youtubeLink="#" copyright="© 2026, Minimal Beauty">
+                <categoryItems jcr:primaryType="nt:unstructured">
+                    <item0 jcr:primaryType="nt:unstructured" label="KITS" link="#"/>
+                    <item1 jcr:primaryType="nt:unstructured" label="BEST SELLERS" link="#"/>
+                    <item2 jcr:primaryType="nt:unstructured" label="BEM ESTAR" link="#"/>
+                    <item3 jcr:primaryType="nt:unstructured" label="TODOS" link="#"/>
+                    <item4 jcr:primaryType="nt:unstructured" label="QUIZ DA PELE" link="#"/>
+                </categoryItems>
+                <informationItems jcr:primaryType="nt:unstructured">
+                    <item0 jcr:primaryType="nt:unstructured" label="FALE CONOSCO" link="#"/>
+                    <item1 jcr:primaryType="nt:unstructured" label="SOBRE A MINIMAL" link="#"/>
+                    <item2 jcr:primaryType="nt:unstructured" label="TECNOLOGIA E SUSTENTABILIDADE" link="#"/>
+                    <item3 jcr:primaryType="nt:unstructured" label="SEJA UM PARCEIRO" link="#"/>
+                    <item4 jcr:primaryType="nt:unstructured" label="LOJAS FÍSICAS PARCEIRAS" link="#"/>
+                    <item5 jcr:primaryType="nt:unstructured" label="POLÍTICA DE PRIVACIDADE" link="#"/>
+                    <item6 jcr:primaryType="nt:unstructured" label="TROCAS E DEVOLUÇÕES" link="#"/>
+                    <item7 jcr:primaryType="nt:unstructured" label="POLÍTICA DE SERVIÇO" link="#"/>
+                    <item8 jcr:primaryType="nt:unstructured" label="POLÍTICAS DE ENTREGA" link="#"/>
+                </informationItems>
+            </footer>
         </root>
     </jcr:content>
 </jcr:root>

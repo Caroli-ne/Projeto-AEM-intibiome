@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured" jcr:title="Minimal Beauty Header" sling:resourceType="cq/gui/components/authoring/dialog">
+  <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/tabs" maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <general jcr:primaryType="nt:unstructured" jcr:title="General" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <promotionText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Promotion text" name="./promotionText"/>
+              <promotionLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Promotion link" rootPath="/content" name="./promotionLink"/>
+              <logoReference jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Logo from DAM (optional)" fieldDescription="When empty, the typographic logo is displayed." rootPath="/content/dam/intibiome" name="./logoReference"/>
+              <logoAlt jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Logo alternative text" name="./logoAlt"/>
+              <homeLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Home link" rootPath="/content" name="./homeLink"/>
+            </items>
+          </general>
+          <navigation jcr:primaryType="nt:unstructured" jcr:title="Navigation" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <menuItems jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="Menu items">
+                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" name="./menuItems">
+                  <items jcr:primaryType="nt:unstructured">
+                    <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Label" name="./label" required="{Boolean}true"/>
+                    <link jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Link" rootPath="/content" name="./link"/>
+                    <active jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/checkbox" text="Display as active" value="true" uncheckedValue="false" name="./active"/>
+                    <submenu jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="Submenu items">
+                      <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" name="./submenu">
+                        <items jcr:primaryType="nt:unstructured">
+                          <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Label" name="./label" required="{Boolean}true"/>
+                          <link jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Link" rootPath="/content" name="./link"/>
+                        </items>
+                      </field>
+                    </submenu>
+                  </items>
+                </field>
+              </menuItems>
+            </items>
+          </navigation>
+          <utilities jcr:primaryType="nt:unstructured" jcr:title="Utility links" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <searchLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Search link" rootPath="/content" name="./searchLink"/>
+              <accountLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Account link" rootPath="/content" name="./accountLink"/>
+              <bagLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Shopping bag link" rootPath="/content" name="./bagLink"/>
+            </items>
+          </utilities>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>

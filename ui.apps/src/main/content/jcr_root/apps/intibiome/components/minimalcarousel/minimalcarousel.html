@@ -1,0 +1,27 @@
+<sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalCarouselModel"/>
+<section id="minimalBeautyCarousel" class="cmp-minimal-carousel carousel slide container-fluid px-0"
+    data-cmp-is="minimal-carousel" data-bs-ride="${model.autoplay ? 'carousel' : ''}"
+    data-bs-interval="${model.interval}" data-bs-pause="false">
+  <div class="cmp-minimal-carousel__viewport carousel-inner" aria-live="polite">
+    <sly data-sly-list.slide="${model.items}">
+      <article class="cmp-minimal-carousel__slide cmp-minimal-carousel__slide--${slide.alignment} carousel-item ${slideList.first ? 'active' : ''}" data-bs-interval="${model.interval}">
+        <img class="cmp-minimal-carousel__image d-block w-100" src="${slide.image @ context='uri'}" alt="" data-mobile-position="${slide.mobilePosition}"/>
+        <div class="cmp-minimal-carousel__shade"></div>
+        <div class="cmp-minimal-carousel__copy carousel-caption">
+          <h2 data-sly-test="${slide.title}">${slide.title}</h2>
+          <p data-sly-test="${slide.subtitle}">${slide.subtitle}</p>
+          <a class="btn btn-light" data-sly-test="${slide.buttonText}" href="${slide.buttonLink @ context='uri'}">${slide.buttonText}</a>
+        </div>
+      </article>
+    </sly>
+  </div>
+  <div class="cmp-minimal-carousel__controls d-flex align-items-center justify-content-center" data-sly-test="${model.items.size > 1}">
+    <button class="carousel-control-prev" type="button" data-bs-target="#minimalBeautyCarousel" data-bs-slide="prev"><span aria-hidden="true">&#8249;</span><span class="visually-hidden">Slide anterior</span></button>
+    <div class="cmp-minimal-carousel__dots carousel-indicators position-static m-0">
+      <sly data-sly-list.slide="${model.items}"><button type="button" data-bs-target="#minimalBeautyCarousel" data-bs-slide-to="${slideList.index}" class="${slideList.first ? 'active' : ''}" aria-current="${slideList.first ? 'true' : 'false'}" aria-label="Ir para o slide ${slideList.count}"></button></sly>
+    </div>
+    <button class="carousel-control-next" type="button" data-bs-target="#minimalBeautyCarousel" data-bs-slide="next"><span aria-hidden="true">&#8250;</span><span class="visually-hidden">Próximo slide</span></button>
+    <button type="button" class="cmp-minimal-carousel__pause" data-action="pause" aria-label="Pausar carrossel" aria-pressed="false"><span></span><span></span></button>
+  </div>
+  <p class="cmp-minimal-carousel__empty" data-sly-test="${!model.items.size && wcmmode.edit}">Configure os slides do carrossel.</p>
+</section>

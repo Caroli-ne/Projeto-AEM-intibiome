@@ -1,0 +1,30 @@
+<section class="cmp-intibiome-hero">
+    <div class="cmp-intibiome-hero__content">
+
+        <p
+            class="cmp-intibiome-hero__eyebrow"
+            data-sly-test="${properties.eyebrow}">
+            ${properties.eyebrow}
+        </p>
+
+        <h1
+            class="cmp-intibiome-hero__title"
+            data-sly-test="${properties.title}">
+            ${properties.title}
+        </h1>
+
+        <p
+            class="cmp-intibiome-hero__description"
+            data-sly-test="${properties.description}">
+            ${properties.description}
+        </p>
+
+        <a
+            class="cmp-intibiome-hero__button"
+            data-sly-test="${properties.buttonText && properties.buttonLink}"
+            href="${properties.buttonLink @ context='uri'}">
+            ${properties.buttonText}
+        </a>
+
+    </div>
+</section>

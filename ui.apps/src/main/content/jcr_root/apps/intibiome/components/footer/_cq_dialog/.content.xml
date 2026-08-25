@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured" jcr:title="Minimal Beauty Footer" sling:resourceType="cq/gui/components/authoring/dialog">
+  <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/tabs" maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <general jcr:primaryType="nt:unstructured" jcr:title="General" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <logoReference jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Logo from DAM (optional)" rootPath="/content/dam/intibiome" name="./logoReference"/>
+              <logoAlt jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Logo alternative text" name="./logoAlt"/>
+              <aboutTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Institutional title" name="./aboutTitle"/>
+              <aboutText jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textarea" fieldLabel="Institutional text" name="./aboutText"/>
+              <copyright jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Copyright" name="./copyright"/>
+            </items>
+          </general>
+          <categories jcr:primaryType="nt:unstructured" jcr:title="Categories" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <categoriesTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Column title" name="./categoriesTitle"/>
+              <categoryItems jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="Links">
+                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" name="./categoryItems">
+                  <items jcr:primaryType="nt:unstructured">
+                    <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Label" name="./label" required="{Boolean}true"/>
+                    <link jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Link" rootPath="/content" name="./link"/>
+                  </items>
+                </field>
+              </categoryItems>
+            </items>
+          </categories>
+          <information jcr:primaryType="nt:unstructured" jcr:title="Information" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <informationTitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Column title" name="./informationTitle"/>
+              <informationItems jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/multifield" composite="{Boolean}true" fieldLabel="Links">
+                <field jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container" name="./informationItems">
+                  <items jcr:primaryType="nt:unstructured">
+                    <label jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Label" name="./label" required="{Boolean}true"/>
+                    <link jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathfield" fieldLabel="Link" rootPath="/content" name="./link"/>
+                  </items>
+                </field>
+              </informationItems>
+            </items>
+          </information>
+          <social jcr:primaryType="nt:unstructured" jcr:title="Social networks" sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <facebookLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Facebook URL" name="./facebookLink"/>
+              <instagramLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Instagram URL" name="./instagramLink"/>
+              <youtubeLink jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="YouTube URL" name="./youtubeLink"/>
+            </items>
+          </social>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>
