@@ -1,0 +1,10 @@
+<sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalSlideModel"/>
+<article class="cmp-minimal-carousel__slide cmp-minimal-carousel__slide--${model.alignment} carousel-item ${model.first ? 'active' : ''}" data-bs-interval="${model.interval}">
+  <img data-sly-test="${model.image}" class="cmp-minimal-carousel__image d-block w-100" src="${model.image @ context='uri'}" alt="${model.imageAlt}" data-mobile-position="${model.mobilePosition}"/>
+  <div class="cmp-minimal-carousel__shade"></div>
+  <div class="cmp-minimal-carousel__copy carousel-caption">
+    <h2 data-sly-test="${model.title}">${model.title}</h2>
+    <p data-sly-test="${model.subtitle}">${model.subtitle}</p>
+    <a class="btn btn-light" data-sly-test="${model.buttonText}" href="${model.buttonLink @ context='uri'}">${model.buttonText}</a>
+  </div>
+</article>

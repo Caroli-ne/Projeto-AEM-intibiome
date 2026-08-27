@@ -15,10 +15,9 @@ class MinimalCarouselModelTest {
     @Test void exposesSlidesAndSettings() {
         context.addModelsForClasses(MinimalCarouselModel.class);
         Resource carousel = context.create().resource("/content/carousel", "autoplay", true, "interval", 6000);
-        Resource slides = context.create().resource(carousel, "slides");
-        context.create().resource(slides, "item0", "title", "KITS", "image", "/content/dam/kits.webp");
+        context.create().resource(carousel, "slide1", "sling:resourceType", "intibiome/components/minimalslide");
         MinimalCarouselModel model = carousel.adaptTo(MinimalCarouselModel.class);
         assertTrue(model.isAutoplay()); assertEquals(6000, model.getInterval());
-        assertEquals("KITS", model.getItems().get(0).getTitle());
+        assertEquals("slide1", model.getSlideNames().get(0));
     }
 }
