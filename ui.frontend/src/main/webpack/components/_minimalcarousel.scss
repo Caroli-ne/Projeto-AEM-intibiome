@@ -1,8 +1,10 @@
 .cmp-minimal-carousel {
   background: #fff; color: #fff; width: 100%;
   &__viewport { height: clamp(360px, 29.2vw, 560px); }
-  &__slide { height: 100%; }
-  &__image { display: block; height: 100%; object-fit: cover; }
+  &__item { height: 100%; overflow: hidden; }
+  &__item > .minimalslide { height: 100%; }
+  &__slide { height: 100%; overflow: hidden; position: relative; }
+  &__image { display: block; height: 100%; max-width: none; object-fit: cover; width: 100%; }
   &__shade { background: rgba(0, 0, 0, .32); inset: 0; position: absolute; }
   &__copy { bottom: auto; left: auto; padding: 0; right: auto; top: 50%; transform: translateY(-50%); width: min(560px, 42%); }
   &__slide--center &__copy { left: 50%; transform: translate(-50%, -50%); }

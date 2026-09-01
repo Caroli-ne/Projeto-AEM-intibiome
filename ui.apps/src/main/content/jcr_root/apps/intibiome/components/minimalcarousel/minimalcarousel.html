@@ -1,11 +1,12 @@
 <sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalCarouselModel"/>
 <section id="${model.id}" class="cmp-minimal-carousel carousel slide container-fluid px-0"
-    data-cmp-is="minimal-carousel" data-panelcontainer="carousel"
+    data-cmp-is="minimal-carousel" data-panelcontainer="${wcmmode.edit && 'carousel'}"
     data-bs-ride="${model.autoplay ? 'carousel' : ''}"
     data-bs-interval="${model.interval}" data-bs-pause="false">
   <div class="cmp-minimal-carousel__viewport carousel-inner" aria-live="polite">
     <sly data-sly-list.slideName="${model.slideNames}">
-      <sly data-sly-resource="${slideName}"></sly>
+      <div data-sly-resource="${slideName @ decorationTagName='div'}"
+          class="cmp-minimal-carousel__item carousel-item ${slideNameList.first ? 'active' : ''}"></div>
     </sly>
   </div>
   <div class="cmp-minimal-carousel__controls d-flex align-items-center justify-content-center" data-sly-test="${model.slideNames.size > 1}">
