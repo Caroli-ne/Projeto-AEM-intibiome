@@ -17,6 +17,11 @@ public class MinimalArticleModel {
     @ValueMapValue @Default(values = "#") private String buttonLink;
     @ValueMapValue @Default(values = "right") private String imagePosition;
     @ValueMapValue @Default(values = "dark") private String theme;
+    @ValueMapValue @Default(values = "half") private String columnRatio;
+    @ValueMapValue @Default(values = "standard") private String height;
+    @ValueMapValue @Default(values = "standard") private String spacing;
+    @ValueMapValue @Default(values = "uppercase") private String titleStyle;
+    @ValueMapValue @Default(values = "center-center") private String focalPoint;
 
     public String getTitle() { return title; }
     public String getText() { return text; }
@@ -26,4 +31,9 @@ public class MinimalArticleModel {
     public String getButtonLink() { return buttonLink; }
     public String getImagePosition() { return imagePosition; }
     public String getTheme() { return theme; }
+    public String getColumnRatio() { return columnRatio; }
+    public String getHeight() { return height; }
+    public String getSpacing() { return spacing; }
+    public String getTitleStyle() { return titleStyle; }
+    public String getFocalPoint() { return focalPoint; }
 }

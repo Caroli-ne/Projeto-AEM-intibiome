@@ -1,0 +1,79 @@
+.cmp-minimal-pillars {
+  background: #fff;
+  color: #111;
+  padding: 42px clamp(24px, 3vw, 58px) 60px;
+
+  &__heading,
+  &__title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    font-size: clamp(25px, 2vw, 34px);
+    margin: 0 0 36px;
+  }
+
+  &__grid {
+    row-gap: 48px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+    width: clamp(220px, 17vw, 300px);
+  }
+
+  &__title {
+    font-size: clamp(21px, 1.55vw, 27px);
+    margin: 30px 0 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 48px;
+
+    &__heading {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    &__grid {
+      row-gap: 42px;
+    }
+
+    &__image {
+      width: min(68vw, 280px);
+    }
+
+    &__title {
+      margin-top: 20px;
+    }
+  }
+}
+
+.cmp-minimal-pillars__empty {
+  padding: 32px;
+  text-align: center;
+}

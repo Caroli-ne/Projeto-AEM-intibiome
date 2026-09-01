@@ -22,8 +22,23 @@
                 <items jcr:primaryType="nt:unstructured"><right jcr:primaryType="nt:unstructured" text="Right" value="right" selected="{Boolean}true"/><left jcr:primaryType="nt:unstructured" text="Left" value="left"/></items>
               </imagePosition>
               <theme jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Text block theme" name="./theme">
-                <items jcr:primaryType="nt:unstructured"><dark jcr:primaryType="nt:unstructured" text="Dark" value="dark" selected="{Boolean}true"/><light jcr:primaryType="nt:unstructured" text="Light" value="light"/></items>
+                <items jcr:primaryType="nt:unstructured"><dark jcr:primaryType="nt:unstructured" text="Dark" value="dark" selected="{Boolean}true"/><light jcr:primaryType="nt:unstructured" text="White" value="light"/><beige jcr:primaryType="nt:unstructured" text="Minimal beige" value="beige"/></items>
               </theme>
+              <columnRatio jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Desktop column ratio" name="./columnRatio">
+                <items jcr:primaryType="nt:unstructured"><half jcr:primaryType="nt:unstructured" text="50 / 50" value="half" selected="{Boolean}true"/><third jcr:primaryType="nt:unstructured" text="Image 33% / Text 67%" value="third"/></items>
+              </columnRatio>
+              <height jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Minimum height" name="./height">
+                <items jcr:primaryType="nt:unstructured"><content jcr:primaryType="nt:unstructured" text="According to content" value="content"/><standard jcr:primaryType="nt:unstructured" text="Standard" value="standard" selected="{Boolean}true"/><tall jcr:primaryType="nt:unstructured" text="Tall" value="tall"/></items>
+              </height>
+              <spacing jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Text spacing" name="./spacing">
+                <items jcr:primaryType="nt:unstructured"><compact jcr:primaryType="nt:unstructured" text="Compact" value="compact"/><standard jcr:primaryType="nt:unstructured" text="Standard" value="standard" selected="{Boolean}true"/><roomy jcr:primaryType="nt:unstructured" text="Roomy" value="roomy"/></items>
+              </spacing>
+              <titleStyle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Title capitalization" name="./titleStyle">
+                <items jcr:primaryType="nt:unstructured"><original jcr:primaryType="nt:unstructured" text="As authored" value="original"/><uppercase jcr:primaryType="nt:unstructured" text="Uppercase" value="uppercase" selected="{Boolean}true"/></items>
+              </titleStyle>
+              <focalPoint jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/select" fieldLabel="Image focal point" name="./focalPoint">
+                <items jcr:primaryType="nt:unstructured"><leftTop jcr:primaryType="nt:unstructured" text="Left top" value="left-top"/><centerTop jcr:primaryType="nt:unstructured" text="Center top" value="center-top"/><rightTop jcr:primaryType="nt:unstructured" text="Right top" value="right-top"/><leftCenter jcr:primaryType="nt:unstructured" text="Left center" value="left-center"/><centerCenter jcr:primaryType="nt:unstructured" text="Center" value="center-center" selected="{Boolean}true"/><rightCenter jcr:primaryType="nt:unstructured" text="Right center" value="right-center"/><leftBottom jcr:primaryType="nt:unstructured" text="Left bottom" value="left-bottom"/><centerBottom jcr:primaryType="nt:unstructured" text="Center bottom" value="center-bottom"/><rightBottom jcr:primaryType="nt:unstructured" text="Right bottom" value="right-bottom"/></items>
+              </focalPoint>
             </items>
           </mediaTab>
         </items>

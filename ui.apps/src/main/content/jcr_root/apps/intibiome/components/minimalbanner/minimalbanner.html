@@ -1,0 +1,14 @@
+<sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalBannerModel"/>
+
+<section data-sly-test="${model.image}"
+    class="cmp-minimal-banner cmp-minimal-banner--align-${model.alignment} cmp-minimal-banner--text-${model.textColor} cmp-minimal-banner--overlay-${model.overlay} cmp-minimal-banner--height-${model.height} cmp-minimal-banner--focus-${model.focalPoint}">
+  <img class="cmp-minimal-banner__image" src="${model.image @ context='uri'}" alt="${model.imageAlt}"/>
+  <div class="cmp-minimal-banner__overlay"></div>
+  <div class="cmp-minimal-banner__content container-xl">
+    <h2 data-sly-test="${model.title}" data-sly-element="${model.headingLevel}">${model.title}</h2>
+  </div>
+</section>
+
+<p class="cmp-minimal-banner__empty" data-sly-test="${!model.image && wcmmode.edit}">
+  Configure o Minimal Beauty Banner.
+</p>

@@ -1,0 +1,26 @@
+<sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalPillarsModel"/>
+
+<section class="cmp-minimal-pillars" data-sly-test.hasContent="${model.pillars.size}">
+  <div class="container-fluid">
+    <h2 class="cmp-minimal-pillars__heading">${model.title}</h2>
+
+    <div class="cmp-minimal-pillars__grid row justify-content-between">
+      <article class="cmp-minimal-pillars__item col-12 col-md-4"
+          data-sly-repeat.pillar="${model.pillars}">
+        <a class="cmp-minimal-pillars__link" data-sly-test="${pillar.link}"
+            href="${pillar.link @ extension='html'}">
+          <img class="cmp-minimal-pillars__image" src="${pillar.image}" alt="${pillar.imageAlt}" loading="lazy"/>
+          <h3 class="cmp-minimal-pillars__title">${pillar.title}</h3>
+        </a>
+        <sly data-sly-test="${!pillar.link}">
+          <img class="cmp-minimal-pillars__image" src="${pillar.image}" alt="${pillar.imageAlt}" loading="lazy"/>
+          <h3 class="cmp-minimal-pillars__title">${pillar.title}</h3>
+        </sly>
+      </article>
+    </div>
+  </div>
+</section>
+
+<p class="cmp-minimal-pillars__empty" data-sly-test="${!hasContent && wcmmode.edit}">
+  Configure the Minimal Beauty Pillars.
+</p>

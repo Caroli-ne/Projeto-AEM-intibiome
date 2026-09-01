@@ -1,13 +1,15 @@
 <sly data-sly-use.model="br.com.caroline.intibiome.core.models.MinimalArticleModel"/>
 <sly data-sly-set.imageOrder="${model.imagePosition == 'left' ? 'order-lg-1' : 'order-lg-2'}"/>
 <sly data-sly-set.copyOrder="${model.imagePosition == 'left' ? 'order-lg-2' : 'order-lg-1'}"/>
+<sly data-sly-set.imageColumn="${model.columnRatio == 'third' ? 'col-lg-4' : 'col-lg-6'}"/>
+<sly data-sly-set.copyColumn="${model.columnRatio == 'third' ? 'col-lg-8' : 'col-lg-6'}"/>
 
-<article class="cmp-minimal-article container-xl py-5">
+<article class="cmp-minimal-article cmp-minimal-article--height-${model.height} cmp-minimal-article--spacing-${model.spacing} cmp-minimal-article--title-${model.titleStyle} cmp-minimal-article--focus-${model.focalPoint} container-xl py-5">
   <div class="row g-0 align-items-stretch">
-    <div class="cmp-minimal-article__media col-12 col-lg-6 order-1 ${imageOrder}">
+    <div class="cmp-minimal-article__media col-12 ${imageColumn} order-1 ${imageOrder}">
       <img data-sly-test="${model.image}" class="w-100 h-100" src="${model.image @ context='uri'}" alt="${model.imageAlt}"/>
     </div>
-    <div class="cmp-minimal-article__copy cmp-minimal-article__copy--${model.theme} col-12 col-lg-6 order-2 ${copyOrder} d-flex flex-column justify-content-center align-items-start">
+    <div class="cmp-minimal-article__copy cmp-minimal-article__copy--${model.theme} col-12 ${copyColumn} order-2 ${copyOrder} d-flex flex-column justify-content-center align-items-start">
       <h2 data-sly-test="${model.title}">${model.title}</h2>
       <div data-sly-test="${model.text}" class="cmp-minimal-article__text">${model.text @ context='html'}</div>
       <a data-sly-test="${model.buttonText}" class="btn btn-light" href="${model.buttonLink @ context='uri'}">${model.buttonText}</a>
